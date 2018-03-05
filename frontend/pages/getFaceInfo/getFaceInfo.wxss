@@ -1,0 +1,73 @@
+/* pages/getFaceInfo/getFaceInfo.wxss */
+
+checkbox-group {
+  border-top: 2rpx solid #888;
+}
+
+label {
+  display: block;
+  padding-bottom: 10rpx;
+  border-bottom: 2rpx solid #888;
+  box-sizing: border-box;
+}
+
+checkbox {
+  width: 30%;
+  margin: 30rpx 0;
+  text-align: center;
+  border-right: 2rpx solid #888;
+  box-sizing: border-box;
+  margin-right: 50rpx;
+}
+
+button {
+  width: 70%;
+}
+
+.button1 {
+  margin-top: 150rpx;
+}
+
+.button2 {
+  margin-top: 50rpx;
+  margin-bottom: 150rpx;
+}
+
+.text {
+  text-align: center !important;
+  font-size: 38rpx;
+  padding: 26rpx 0;
+}
+
+.info {
+  border-bottom: 6rpx solid #09bb07;
+}
+
+.visitor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 26rpx 0;
+  border-top: 2rpx solid #888;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.view1 {
+  width: 30%;
+  border-right: 2rpx solid #888;
+  box-sizing: border-box;
+}
+
+.view2 {
+  width: 70%;
+  text-align: left;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+
+image {
+  width: 300rpx;
+  height: 300rpx;
+}

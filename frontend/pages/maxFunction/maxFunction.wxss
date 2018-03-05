@@ -1,0 +1,11 @@
+/* pages/maxFunction/maxFunction.wxss */
+view{
+  background: #576b95;
+  color: #fff;
+  text-align: center;
+  font-size: 36rpx;
+  padding: 70rpx 0;
+  width: 70%;
+  margin: 100rpx auto;
+  border-radius: 10rpx;
+}

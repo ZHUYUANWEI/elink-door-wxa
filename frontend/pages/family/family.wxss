@@ -1,0 +1,71 @@
+/* pages/family/family.wxss */
+
+.picker-box {
+  border-bottom: 1px solid #8a8a8a;
+  color: #8a8a8a;
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.picker {
+  padding: 30rpx 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.picker image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.className {
+  background: #8BC34A;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  width: 20%;
+  padding: 20rpx 40rpx;
+}
+.info{
+  display: flex;
+  text-align: left;
+}
+.info view{
+  border: 2rpx solid #bbb;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 18rpx 0;
+}
+.info1{
+  width: 20%;
+}
+.info2{
+  width: 35%;
+}
+.info3{
+  width: 25%;
+}
+.info .info4{
+  width: 20%;
+  padding: 0;
+}
+.info4 button{
+  margin-top:10rpx;
+  line-height:2.3 !important;
+  padding:0 1em !important;
+  font-size:28rpx !important;
+}
+.image{
+  text-align: center;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+.image image{
+  width: 80rpx;
+  height: 80rpx;
+  border: 4rpx solid #bbb;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}

@@ -1,0 +1,47 @@
+/* pages/register/register.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150rpx 0rpx;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  padding: 30rpx;
+  border-radius: 50%;
+  border: 1px solid #666;
+}
+
+.form {
+  width: 65%;
+  margin-top: 60rpx;
+}
+
+.form input {
+  border: 1px solid #666;
+  box-sizing: border-box;
+  height: 80rpx;
+  padding: 0 20rpx;
+  margin: 20rpx 0;
+}
+.form view {
+  display: flex;
+  align-content: center;
+}
+.form view button{
+  padding:0 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 20rpx 0;
+  border-radius: 0;
+  width: 6rem;
+}
+.form .button{
+  margin-top: 60rpx;
+}

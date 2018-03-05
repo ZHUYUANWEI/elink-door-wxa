@@ -1,0 +1,35 @@
+<!--pages/getFaceUpdate/getFaceUpdate.wxml-->
+<view class='user'>
+  <view class='view1'>用户ID</view>
+  <view class='view2'>
+    <picker bindchange="bindPickerChange" value="{{index}}" name='personId' range="{{items}}" range-key="{{'personId'}}">
+      <view class="picker">
+        {{items[index].personId}}
+        <image src='/images/triangle.png'></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='user'>
+  <view class='view1'>用户卡号</view>
+  <view class='view2'>
+    <input name='cardNo' value='{{items[index].cardNo}}' disabled='true' />
+  </view>
+</view>
+<view class='img'>
+  <block wx:if='{{items[index].faceUrl == ""}}'>
+    <view>请点击加号进行添加（只能上传jpg或jpeg格式图片）</view>
+    <view>faceUrl:无</view>
+  </block>
+  <block wx:else>
+    <view>点击预览图片，点击加号进行更换（只能上传jpg或jpeg格式图片）</view>
+    <view style='word-wrap: break-word;'>faceUrl:{{items[index].faceUrl}}</view>
+  </block>
+  <block wx:if='{{items[index].faceUrl != ""}}'>
+    <image wx:if='{{items[index].faceUrl}}' bindtap='previewImage' class='appImg' src='{{items[index].faceUrl}}' data-src='{{items[index].faceUrl}}'></image>
+  </block>
+  
+  <image bindtap='addImg' class='appImg' src='/images/appImg.png'></image>
+</view>
+
+<button disabled="{{disabled}}" bindtap='uploadFile' size="default" type="primary">确认提交</button>

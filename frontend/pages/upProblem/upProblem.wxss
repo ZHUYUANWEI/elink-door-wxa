@@ -1,0 +1,25 @@
+/* pages/problem/problem.wxss */
+.problem{
+
+}
+.view{
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  display: flex; 
+  border-top: 2px solid #bbb;
+}
+.text1{
+  width: 30%;
+  text-align: center;
+} 
+.text2{
+  width: 70%;
+  text-align: left;
+  border-left: 2rpx solid #bbb;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.problem button{
+  margin-top: 150rpx;
+  width: 70%;
+}

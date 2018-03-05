@@ -1,0 +1,53 @@
+<!--pages/toggleNotice/toggleNotice.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='user'>
+    <view class='view1'>token</view>
+    <view class='view2'>
+      <picker bindchange="bindTokenChange" value="{{tokenIndex}}" name='tokena' range="{{tokens}}" range-key="{{'token'}}">
+        <view class="picker">
+          <view class='ellipsis'>{{tokens[tokenIndex].token}}</view>
+          <image src='/images/triangle.png'></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='user' wx:if="{{tokens[tokenIndex].disabled}}">
+    <view class='view1'>token输入</view>
+    <view class='view2'>
+      <input name='tokenb' value='' placeholder='请输入token' />
+    </view>
+  </view>
+  <view class='user'>
+    <view class='view1'>projectId</view>
+    <view class='view2'>
+      <picker bindchange="bindProjectIdChange" value="{{projectIdIndex}}" name='projectIda' range="{{projectIds}}" range-key="{{'projectId'}}">
+        <view class="picker">
+          <view class='ellipsis'>{{projectIds[projectIdIndex].projectId}}</view>
+          <image src='/images/triangle.png'></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='user' wx:if="{{projectIds[projectIdIndex].disabled}}">
+    <view class='view1'>projectId输入</view>
+    <view class='view2'>
+      <input name='projectIdb' value='' placeholder='请输入projectId' />
+    </view>
+  </view>
+  <view class='user'>
+    <view class='view1'>roomInfo</view>
+    <view class='view2'>
+      <input name='roomInfo' placeholder='请输入roomInfo' />
+    </view>
+  </view>
+  <view class='user'>
+    <view class='view1'>registrationId</view>
+    <view class='view2'>
+      <input name='registrationId' placeholder='请输入registrationId' />
+    </view>
+  </view>
+  <view style='margin:50rpx 15px 0 15px;word-wrap: break-word;'>{{res}}</view>
+  <button formType='submit' size="default" type="primary" style='margin-top: 150rpx;'>获取状态</button>
+  <button formType='submit' size="default" type="primary" data-acceptnotice='1'>打开通知</button>
+  <button formType='submit' size="default" type="primary" data-acceptnotice='0' style='margin-bottom: 150rpx;'>关闭通知</button>
+</form>

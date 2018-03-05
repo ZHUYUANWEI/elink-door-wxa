@@ -1,0 +1,59 @@
+/* pages/userTwoCode/userTwoCode.wxss */
+page {
+  padding-top: 10rpx;
+}
+
+.visitor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 26rpx 0;
+  border-bottom: 2rpx solid #888;
+}
+
+.view1 {
+  width: 30%;
+  border-right: 2rpx solid #888;
+  box-sizing: border-box;
+}
+
+.view2 {
+  width: 70%;
+  text-align: left;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+
+button {
+  width: 70%;
+  margin-top: 150rpx;
+  margin-bottom: 150rpx;
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.img {
+  margin-top: 100rpx;
+  border-top: 2rpx solid #888;
+}
+
+.img image {
+  width: 300rpx;
+  height: 300rpx;
+}
+.img .text{
+  text-align: center !important;
+  font-size: 38rpx;
+  padding: 26rpx 0;
+  border-bottom: 2rpx solid #888;
+}

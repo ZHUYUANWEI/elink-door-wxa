@@ -1,0 +1,82 @@
+<!--pages/devicesOfRoom/devicesOfRoom.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='user'>
+    <view class='view1'>token</view>
+    <view class='view2'>
+      <picker bindchange="bindTokenChange" value="{{tokenIndex}}" name='tokena' range="{{tokens}}" range-key="{{'token'}}">
+        <view class="picker">
+          <view class='ellipsis'>{{tokens[tokenIndex].token}}</view>
+          <image src='/images/triangle.png'></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='user' wx:if="{{tokens[tokenIndex].disabled}}">
+    <view class='view1'>token输入</view>
+    <view class='view2'>
+      <input name='tokenb' value='' placeholder='请输入token' />
+    </view>
+  </view>
+  <view class='user'>
+    <view class='view1'>projectId</view>
+    <view class='view2'>
+      <picker bindchange="bindProjectIdChange" value="{{projectIdIndex}}" name='projectIda' range="{{projectIds}}" range-key="{{'projectId'}}">
+        <view class="picker">
+          <view class='ellipsis'>{{projectIds[projectIdIndex].projectId}}</view>
+          <image src='/images/triangle.png'></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='user' wx:if="{{projectIds[projectIdIndex].disabled}}">
+    <view class='view1'>projectId输入</view>
+    <view class='view2'>
+      <input name='projectIdb' value='' placeholder='请输入projectId' />
+    </view>
+  </view>
+  <view class='user'>
+    <view class='view1'>roomInfo</view>
+    <view class='view2'>
+      <input name='roomInfo' placeholder='请输入roomInfo' />
+    </view>
+  </view>
+
+  <button formType='submit' size="default" type="primary" style='margin-top: 150rpx;'>查询设备</button>
+</form>
+
+
+<view wx:if="{{disable}}" style='margin:100rpx 0 150rpx'>
+  <view class='title'>设备列表</view>
+  <view wx:for="{{datas}}" class='info'>
+    <view class='user'>
+      <view class='view1'>registrationId</view>
+      <view class='view2'>
+        {{item.registrationId}}
+      </view>
+    </view>
+    <view class='user'>
+      <view class='view1'>acceptNotice</view>
+      <view class='view2'>
+        {{item.acceptNotice}}
+      </view>
+    </view>
+    <view class='user'>
+      <view class='view1'>mobile</view>
+      <view class='view2'>
+        {{item.mobile}}
+      </view>
+    </view>
+    <view class='user'>
+      <view class='view1'>userId</view>
+      <view class='view2'>
+        {{item.userId}}
+      </view>
+    </view>
+    <view class='user'>
+      <view class='view1'>comment</view>
+      <view class='view2'>
+        {{item.comment}}
+      </view>
+    </view>
+  </view>
+</view>

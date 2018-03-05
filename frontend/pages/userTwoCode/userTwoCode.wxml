@@ -1,0 +1,39 @@
+<!--pages/userTwoCode/userTwoCode.wxml-->
+<!--pages/visitortwocode/visitortwocode.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='visitor'>
+    <view class='view1'>用户ID</view>
+    <view class='view2'>
+      <picker bindchange="bindPickerChange" value="{{users[index].personId}}" name='personId' range="{{users}}" range-key="{{'personId'}}">
+        <view class="picker">
+          {{users[index].personId}}
+          <image src='/images/triangle.png'></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='visitor'>
+    <view class='view1'>用户卡号</view>
+    <view class='view2'>
+      <input name='cardNum' value='{{users[index].cardNum}}' disabled='true' />
+    </view>
+  </view>
+
+  <view wx:if="{{result}}" class='img'>
+    <view class='text'>获取到的访客二维码信息</view>
+    <view class='visitor'>
+      <view class='view1'>访客url</view>
+      <view class='view2' style='word-wrap: break-word;'>
+        {{imgUrl}}
+      </view>
+    </view>
+    <view class='visitor'>
+      <view class='view1'>访客二维码</view>
+      <view class='view2'>
+        <image src='{{imgUrl}}'></image>
+      </view>
+    </view>
+  </view>
+  <button wx:if="{{result}}" formType='submit' size="default" type="primary">重新获取</button>
+  <button wx:else formType='submit' size="default" type="primary">获取二维码</button>
+</form>

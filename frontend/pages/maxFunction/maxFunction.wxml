@@ -1,0 +1,4 @@
+<!--pages/maxFunction/maxFunction.wxml-->
+<view wx:for='{{platform.maxFunction}}' wx:key='maxFunction' bindtap='goMinFunction' data-id='{{index}}'>
+  {{item.maxFunctionName}}
+</view>

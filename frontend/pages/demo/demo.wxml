@@ -1,0 +1,4 @@
+<!--pages/demo/demo.wxml-->
+<view wx:for='{{demo}}' wx:key='demo' bindtap='goMaxFunction' data-id='{{index}}'>
+  {{item.platformName}}
+</view>

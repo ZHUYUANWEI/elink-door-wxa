@@ -1,0 +1,60 @@
+/* pages/getFaceUpdate/getFaceUpdate.wxss */
+page {
+  padding-top: 10rpx;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 26rpx 0;
+  border-bottom: 2rpx solid #888;
+}
+
+.view1 {
+  width: 30%;
+  border-right: 2rpx solid #888;
+  box-sizing: border-box;
+}
+
+.view2 {
+  width: 70%;
+  text-align: left;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+
+.view3 {
+  display: flex;
+}
+
+button {
+  width: 70%;
+  margin-top: 150rpx;
+  margin-bottom: 150rpx;
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.img{
+  margin-top: 30rpx;
+  padding: 30rpx 50rpx;
+  border-bottom: 2rpx solid #888;
+  border-top: 2rpx solid #888;
+  box-sizing: border-box;
+}
+.appImg{
+  width: 200rpx;
+  height: 200rpx;
+  padding: 20rpx;
+  padding-left: 0; 
+}

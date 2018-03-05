@@ -1,0 +1,18 @@
+<!--pages/problem/problem.wxml-->
+<view class='problem'>
+  <view class='view'>
+    <text class='text1'>名称：</text>
+    <text class='text2'>{{name}}</text>
+  </view>
+  <view class='view'>
+    <text class='text1'>问题：</text>
+    <text class='text2'>{{problem}}</text>
+  </view>
+  <view class='view' style='border-bottom: 2px solid #bbb;'>
+    <text class='text1'>详情：</text>
+    <text class='text2'>{{details}}</text>
+  </view>
+</view> 
+<view class='problem'>
+  <button bindtap='returnList' size="default" type="warn">确认上报</button>
+</view>

@@ -1,0 +1,43 @@
+/* pages/add/add.wxss */
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view1 {
+  border: 2rpx solid #bbb;
+  box-sizing: border-box;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 20%;
+}
+
+.view2 {
+  border: 2rpx solid #bbb;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 0 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.view2 input {
+  width: 100%;
+}
+.picker{
+  padding-right: 40rpx;
+}
+.checkbox{
+  padding-left:40rpx;
+}
+button{
+  width: 70%;
+  margin-top: 150rpx;
+}

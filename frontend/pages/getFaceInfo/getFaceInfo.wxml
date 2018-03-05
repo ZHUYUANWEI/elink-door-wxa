@@ -1,0 +1,72 @@
+<!--pages/getFaceInfo/getFaceInfo.wxml-->
+<view class='text'>勾选personId后获取对应的人脸信息</view>
+<checkbox-group bindchange="checkboxChange">
+  <label class="info" wx:for="{{items}}" wx:key="items">
+    <checkbox value="{{index}}" checked="{{item.checked}}" />用户卡号：{{item.cardNo}}
+
+    <view wx:if="{{item.checked}}">
+      <view class='visitor' style='display:block' wx:if='{{items[index].faceUrl == ""}}'>
+        还未上传
+      </view>
+      <block wx:else>
+        <view class='visitor'>
+          <view class='view1'>用户ID</view>
+          <view class='view2'>
+            {{items[index].personId}}
+          </view>
+        </view>
+        <view class='visitor'>
+          <view class='view1'>人脸url</view>
+          <view class='view2' style='word-wrap: break-word;'>
+            {{items[index].faceUrl}}
+          </view>
+        </view>
+        <view class='visitor'>
+          <view class='view1'>用户人脸</view>
+          <view class='view2'>
+            <image src='{{items[index].faceUrl}}'></image>
+          </view>
+        </view>
+      </block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <view class='visitor'>
+        <view class='view1'>人脸url</view>
+        <view class='view2' wx:if='{{items[index].faceUrl == ""}}'>
+          没有上传人脸
+        </view>
+        <view class='view2' style='word-wrap: break-word;' wx:else>
+          {{items[index].faceUrl}}
+        </view>
+      </view>
+
+      <view class='view2' wx:if='{{items[index].faceUrl == ""}}'></view>
+      <view class='visitor' wx:else>
+        <view class='view1'>用户人脸</view>
+        <view class='view2'>
+          <image src='{{items[index].faceUrl}}'></image>
+        </view>
+      </view> -->
+
+    </view>
+  </label>
+
+</checkbox-group>
+<button bindtap='getFace' size="default" type="primary" class='button1'>获取</button>
+<button bindtap='resetFace' size="default" type="warn" class='button2'>清除</button>

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/demo/demo",
+    "pages/devicesOfRoom/devicesOfRoom",
+
+    "pages/maxFunction/maxFunction",
+    "pages/minFunction/minFunction",
+
+    "pages/toggleNotice/toggleNotice",
+    
+    "pages/registerApp/registerApp",
+
+    "pages/userTwoCode/userTwoCode",
+    "pages/visitorTwoCode/visitorTwoCode",
+
+    "pages/getFaceInfo/getFaceInfo",
+    "pages/getFaceUpdate/getFaceUpdate",
+    
+    "pages/register/register",
+
+    "pages/remoteOpen/remoteOpen",
+
+    "pages/family/family",
+    "pages/addFamily/addFamily",
+    "pages/upProblem/upProblem"
+    
+    
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "e联开门",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/remoteOpen/remoteOpen",
+        "text": "远程开门",
+        "iconPath": "images/open.png",
+        "selectedIconPath": "images/opens.png"
+      },
+      {
+        "pagePath": "pages/family/family",
+        "text": "成员管理",
+        "iconPath": "images/family.png",
+        "selectedIconPath": "images/familys.png"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "功能演示",
+        "iconPath": "images/demo.png",
+        "selectedIconPath": "images/demos.png"
+      }
+    ]
+  }
+}

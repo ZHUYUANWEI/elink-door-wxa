@@ -1,0 +1,24 @@
+<!--pages/open/open.wxml-->
+<view class='list'>
+  <view class='info' style='font-weight: bold;font-size:32rpx;'>
+    <view class='info1'>名称</view>
+    <view class='info2'>状态</view>
+    <view class='info3'>操作</view>
+  </view>
+  <view wx:for="{{doorList}}" wx:key="doorId">
+    <view class='info' id='{{item.doorId}}'>
+      <view class="info1">{{item.name}}</view>
+      <view class="info2 green" wx:if="{{item.state}}">已开启</view>
+      <view class="info2" wx:else="{{item.operation}}">已关闭</view>
+      <view class="info3">
+        <button bindtap='openDoor' disabled='{{item.disabled}}' data-id='{{item.doorId}}' size="mini" type="primary">开门</button>
+      </view>
+    </view>
+    <view class="info green" wx:if="{{item.dropDown}}">
+      <view class="info4">正在开启中...</view>
+      <view class="info5">
+        <button bindtap='cancel' data-id='{{item.doorId}}' size="mini" type="warn">取消</button>
+      </view>
+    </view>
+  </view>
+</view>

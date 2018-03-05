@@ -1,0 +1,13 @@
+<!--register.wxml-->
+<view class="container">
+  <image class="logo" src='/images/logo.png' background-size="cover"></image>
+  <form bindsubmit="formSubmit" class='form'>
+    <input bindinput="mobileInputEvent" id='a' name="mobile" type='number' placeholder='请输入手机号码' />
+    <view>
+      <input name="code" type='number' maxlength='6' placeholder='请输入验证码' />
+      <button bindtap='validateMobile' data-id='a' disabled='{{disabled}}' size="mini" type="primary">{{VerifyCode}}</button>
+    </view>
+    <button class='button' form-type='submit' size="default" type="primary">认证</button>
+  </form>
+
+</view>

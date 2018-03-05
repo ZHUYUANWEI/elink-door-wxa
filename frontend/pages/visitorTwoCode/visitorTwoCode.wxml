@@ -1,0 +1,93 @@
+<!--pages/visitortwocode/visitortwocode.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='visitor'>
+    <view class='view1'>用户ID</view>
+    <view class='view2'>
+      <picker bindchange="bindPickerChange" value="{{index}}" name='personId' range="{{visitors}}" range-key="{{'personId'}}">
+        <view class="picker">
+          {{visitors[index].personId}}
+          <image src='/images/triangle.png'></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='visitor'>
+    <view class='view1'>用户卡号</view>
+    <view class='view2'>
+      <input name='cardNo' value='{{visitors[index].cardNo}}' disabled='true' />
+    </view>
+  </view>
+  <view class='visitor'>
+    <view class='view1'>有效期</view>
+    <view class='view2'>
+      <input name='period' maxlength="10" value='{{visitors[index].period}}' placeholder='h12表示12小时，m10表示10分钟' />
+    </view>
+  </view>
+  <view class='visitor'>
+    <view class='view1'>最大开锁次数</view>
+    <view class='view2'>
+      <input name='unlockCount' maxlength="10" value='{{visitors[index].unlockCount}}' type='number' placeholder='请填写大于0的整数' />
+    </view>
+  </view>
+  <view class='visitor'>
+    <view class='view1'>姓名</view>
+    <view class='view2'>
+      <input name='visitorName' maxlength="10" value='{{visitors[index].visitorName}}' placeholder='请填写姓名' />
+    </view>
+  </view>
+  <view class='visitor'>
+    <view class='view1'>手机号</view>
+    <view class='view2'>
+      <input name='phone' value='{{visitors[index].phone}}' type='number' placeholder='请填写手机号' />
+    </view>
+  </view>
+  <view class='visitor'>
+    <view class='view1'>来访时间</view>
+    <view class='view2 view3'>
+      <picker mode="date" value="{{startDate}}" start="{{start}}" end="2030-01-01" bindchange="bindStartDateChange">
+        <view class="picker" style='padding-right:30rpx'>
+          {{startDate}}
+        </view>
+      </picker>
+      <picker mode="time" value="{{startHour}}" bindchange="bindStartHourChange">
+        <view class="picker">
+          {{startHour}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='visitor'>
+    <view class='view1'>结束时间</view>
+    <view class='view2 view3'>
+      <picker mode="date" value="{{endDate}}" start="{{start}}" end="2030-01-01" bindchange="bindEedDateChange">
+        <view class="picker" style='padding-right:30rpx'>
+          {{endDate}}
+        </view>
+      </picker>
+      <picker mode="time" value="{{endHour}}" bindchange="bindEedHourChange">
+        <view class="picker">
+          {{endHour}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view wx:if="{{result}}" class='img'>
+    <view class='text'>获取到的访客二维码信息</view>
+    <view class='visitor'>
+      <view class='view1'>访客url</view>
+      <view class='view2' style='word-wrap: break-word;'>
+        {{imgUrl}}
+      </view>
+    </view>
+    <view class='visitor'>
+      <view class='view1'>访客二维码</view>
+      <view class='view2'>
+        <image src='{{imgUrl}}'></image>
+      </view>
+    </view>
+  </view>
+  <button wx:if="{{result}}" formType='submit' size="default" type="primary">重新获取</button>
+  <button wx:else formType='submit' size="default" type="primary">获取二维码</button>
+
+</form>

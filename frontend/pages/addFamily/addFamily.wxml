@@ -1,0 +1,39 @@
+<!--pages/add/add.wxml-->
+<view>
+  <form bindsubmit='formSubmit'>
+    <view class='view'>
+      <view class='view1'>分类</view>
+      <view class='view2'>
+        <input name='className' value='{{className}}' disabled='true' />
+      </view>
+    </view>
+    <view class='view'>
+      <view class='view1'>姓名</view>
+      <view class='view2'>
+        <input name='name' placeholder='请输入被添加人的姓名' />
+      </view>
+    </view>
+    <view class='view'>
+      <view class='view1'>手机号</view>
+      <view class='view2'>
+        <input name='mobile' type='number' placeholder='请输入被添加人的手机号' />
+      </view>
+    </view>
+    <view class='view'>
+      <view class='view1'>有效期</view>
+      <view class='view2'>
+        <picker mode="date" name='time' disabled="{{disabled}}" value="{{time}}" start="{{date}}" end="2050-12-31" bindchange="bindDateChange">
+          <view class="picker">
+            {{time}}
+          </view>
+        </picker>或
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{items}}" wx:key="items">
+            <checkbox />{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+    <button formType='submit' size="default" type="primary">确认添加</button>
+  </form>
+</view>

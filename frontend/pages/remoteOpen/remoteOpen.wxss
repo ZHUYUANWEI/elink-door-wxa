@@ -1,0 +1,42 @@
+/* pages/open/open.wxss */
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.info view {
+  border: 2rpx solid #bbb;
+  box-sizing: border-box;
+  height: 90rpx;
+  line-height: 80rpx;
+}
+
+.info1 {
+  width: 50%;
+}
+.info2 {
+  width: 25%;
+}
+.info3 {
+  width: 25%;
+}
+.info4 {
+  width: 75%;
+  border-right: 0 !important;
+}
+.info5 {
+  width: 25%;
+  border-left: 0 !important;
+}
+.green{
+  color: green;
+}
+.info3 button, .info5 button{
+  margin-top:12rpx;
+  line-height:2.3 !important;
+  padding:0 1em !important;
+  font-size:28rpx !important;
+}

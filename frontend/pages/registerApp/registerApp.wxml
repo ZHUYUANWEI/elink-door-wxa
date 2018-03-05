@@ -1,0 +1,35 @@
+<!--pages/registerApp/registerApp.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='user'>
+    <view class='view1'>APP</view>
+    <view class='view2'>
+      <picker bindchange="bindPickerChange" value="{{index}}" name='appName' range="{{app}}" range-key="{{'appName'}}">
+        <view class="picker">
+          <view class='ellipsis'>{{app[index].appName}}</view>
+          <image src='/images/triangle.png'></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='user'>
+    <view class='view1'>token</view>
+    <view class='view2'>
+      <input name='token' value='{{app[index].token}}' disabled='{{app[index].disabled}}' placeholder='请输入token' />
+    </view>
+  </view>
+  <view class='user'>
+    <view class='view1'>jPushAppId</view>
+    <view class='view2'>
+      <input name='jPushAppId' placeholder='极光推送中注册的应用appId' />
+    </view>
+  </view>
+  <view class='user'>
+    <view class='view1'>jPushMasterSecret</view>
+    <view class='view2'>
+      <input name='jPushMasterSecret' placeholder='极光推送中的应用MasterSecret' />
+    </view>
+  </view>
+
+  <button formType='submit' size="default" type="primary">确认提交</button>
+</form>
+<view style='margin:0 15px 50rpx 15px;word-wrap: break-word;'>{{res}}</view>

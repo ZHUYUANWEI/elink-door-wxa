@@ -1,0 +1,4 @@
+<!--pages/minFunction/minFunction.wxml-->
+<view wx:for='{{maxFunction.minFunction}}' wx:key='minFunction' bindtap='selectItem' data-id='{{index}}'>
+  {{item.minFunctionName}}
+</view>

@@ -1,0 +1,63 @@
+<!--pages/family/family.wxml-->
+<view class='picker-box'>
+  <picker bindchange="bindPickerChange" value="1" range="{{family}}" range-key="roomName">
+    <view class="picker">
+      {{family[_index].roomName}}
+      <image src='/images/triangle.png'></image>
+    </view>
+  </picker>
+</view>
+<view wx:for="{{family[_index].classification}}" wx:key='classification' wx:for-item="i" wx:for-index="iidx" >
+  <view class='className'>{{i.className}}</view>
+  <view class='info'>
+    <view class='info1'>姓名</view>
+    <view class='info2'>手机号</view>
+    <view class='info3'>有效期</view>
+    <view class='info4' style='padding: 18rpx 0;'>操作</view>
+  </view>
+  <view wx:for="{{family[_index].classification[iidx].familyInfo}}" wx:key='familyInfo' wx:for-item="j" wx:for-index="jidx" class='info' >
+    <view class='info1'>{{j.name}}</view>
+    <view class='info2'>{{j.mobile}}</view>
+    <!-- <view class='info3'>{{j.time}}</view> -->
+    <view class='info3' wx:if='{{j.time == "2100-12-31"}}'>永久</view>
+    <view class='info3' wx:else>{{j.time}}</view>
+    <view class='info4'>
+      <button bindtap='deletInfo' id='{{iidx}}' data-id='{{jidx}}' size="mini" type="warn">删除</button>
+    </view>
+  </view>
+  <view  class='image'>
+    <image bindtap='appInfo' id='{{iidx}}' src='/images/jiahao.png'></image>
+  </view>
+</view>
+
+
+
+
+<!-- <view class='picker-box'>
+  <picker bindchange="bindPickerChange" value="1" range="{{family}}" range-key="roomName">
+    <view class="picker">
+      {{family[_index].roomName}}
+      <image src='/images/triangle.png'></image>
+    </view>
+  </picker>
+</view>
+<view wx:for="{{_classification}}" wx:for-item="i" wx:for-index="iidx" >
+  <view class='className'>{{i.className}}</view>
+  <view class='info'>
+    <view class='info1'>姓名</view>
+    <view class='info2'>手机号</view>
+    <view class='info3'>有效期</view>
+    <view class='info4' style='padding: 18rpx 0;'>操作</view>
+  </view>
+  <view wx:for="{{_classification[iidx].familyInfo}}" wx:for-item="j" wx:for-index="jidx" class='info' >
+    <view class='info1'>{{j.name}}</view>
+    <view class='info2'>{{j.mobile}}</view>
+    <view class='info3'>{{j.time}}</view>
+    <view class='info4'>
+      <button bindtap='deletInfo' id='{{iidx}}' data-id='{{jidx}}' size="mini" type="warn">删除</button>
+    </view>
+  </view>
+  <view  class='image'>
+    <image src='/images/jiahao.png'></image>
+  </view>
+</view> -->
